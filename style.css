@@ -1,0 +1,17 @@
+html {
+    width: 100vh;
+    height: 100vh;
+    text-align: center;
+}
+
+.base {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    width: 400px;
+    height: 600px;
+    background-color: rgb(34, 70, 168);
+    border-radius: 10px;
+}
