@@ -11,20 +11,21 @@ function getTime() {
 }
 
 function addTimer(time) {
-    base.appendChild(timer)
-    timer.innerHTML = time;
-    console.log(`Faltam ${time} segundos.`)
-    console.log(typeof(time))
-    d = setTimeout(decrement, 1000);
+    if(time > 0) {
+        base.appendChild(timer)
+        timer.innerHTML = time;
+        console.log(`Faltam ${time} segundos.`)
+        console.log(typeof(time))
+        d = setTimeout(decrement, 1000);        
+    } else {
+        timer.innerHTML = "Time's up!"
+    }
+
 }
 
 function decrement() {
-    if(time > 0) {
-        time -= 1;
-        addTimer(time);
-    } else {
-        return;
-    }
+    time -= 1;
+    addTimer(time);
 }
 
 function resetTimer() {
